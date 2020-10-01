@@ -7,6 +7,14 @@ on:
 
 jobs:
 
+  gradle-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run basic gradle command
+        run: ./scripts/run_basic_gradle_command.sh
+
   license-finder:
     runs-on: ubuntu-latest
     steps:
