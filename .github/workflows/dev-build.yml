@@ -1,0 +1,16 @@
+name: Dev Build
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+
+  license-finder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run license finder
+        run: ./scripts/run_license_finder.sh
